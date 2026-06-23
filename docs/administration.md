@@ -2,8 +2,7 @@
 
 ## Making backups {#backup}
 
-Multiple options exist for making backups of your IDMS instance,
-depending on how you installed paperless.
+Multiple options exist for making backups of your IDMS instance.
 
 Before making a backup, it's probably best to make sure that IDMS is not actively
 consuming documents at that time.
