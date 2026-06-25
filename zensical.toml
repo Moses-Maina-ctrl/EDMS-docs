@@ -92,11 +92,11 @@ code = "Roboto Mono"
 # Extras
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/paperless-ngx/paperless-ngx"
+link = "https://github.com/impactai-lab/idms"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/docker"
-link = "https://hub.docker.com/r/paperlessngx/paperless-ngx"
+link = "https://hub.docker.com/r/impactailab/idms"
 
 [[project.extra.social]]
 icon = "material/chat"
