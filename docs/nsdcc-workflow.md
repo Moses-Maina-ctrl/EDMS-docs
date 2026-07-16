@@ -156,20 +156,16 @@ python manage.py create_workflow_groups
 
 ## What Remains
 
-The following components are not yet implemented and are tracked as GitHub issues:
-
-### Frontend (Angular)
-- `NsdccWorkflowService` — TypeScript service for all API calls
-- `WorkflowRoleGuard` — route guard for Registry-only pages
-- `WorkflowInboxComponent` — user's pending items page
-- `RegistryDashboardComponent` — Registry oversight page with filtering
-- `WorkflowDetailComponent` — two-column detail view with PDF viewer
-- `WorkflowInitiateComponent` — modal for initiating workflows after upload
-- Sidebar navigation additions with inbox badge
-- Upload flow hook to auto-open initiation modal
+The NSDCC workflow frontend is complete. The remaining work is intentionally
+limited to the following items:
 
 ### DevOps
 - Add `create_workflow_groups` to Docker container init scripts
+
+### Backlog
+- Product and technical follow-ups are tracked in
+  `docs/nsdcc-handoff/backlog-for-exploration.md` and should be planned as
+  separate work.
 
 ## Testing the API
 

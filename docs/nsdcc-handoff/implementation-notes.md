@@ -124,3 +124,17 @@ is the organized import block in `app-frame.component.ts`.
 
 Inbox refresh failures deliberately retain the last successful badge count and do not
 surface a toast or console error; this matches the sidebar's background-refresh role.
+
+## Workflow UI pass — 2026-07-16
+
+A local browser QA pass of PRs #47–#54 and issues #41–#46/#50 is recorded in
+`docs/qa/workflow-ui-pass-2026-07-16/report.md`, with page/modal screenshots
+and two repro videos. It verified the new workflow routes, all Registry
+filters, the non-Registry guard redirect, manual and upload-triggered
+initiation, and responsive layouts. The actionable findings are: submitting
+an empty Change assignee form mutates workflow status (high), DOCX upload is
+accepted by the picker then rejected by the consumer (high), the Registry
+table hides operational columns on mobile without a scroll cue (medium), and
+the no-group dashboard emits an unhandled saved-views 403 (low). The report
+also records intentional local fixture mutations made while reproducing the
+issues; reset the dev seed data before treating its states as pristine.
