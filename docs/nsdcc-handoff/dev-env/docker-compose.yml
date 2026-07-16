@@ -1,0 +1,29 @@
+services:
+  broker:
+    image: docker.io/library/redis:8
+    restart: unless-stopped
+
+  webserver:
+    image: edms-local:stack
+    restart: unless-stopped
+    depends_on:
+      - broker
+    ports:
+      - "8000:8000"
+    volumes:
+      - data:/usr/src/paperless/data
+      - media:/usr/src/paperless/media
+    environment:
+      PAPERLESS_REDIS: redis://broker:6379
+      PAPERLESS_DBENGINE: sqlite
+      PAPERLESS_SECRET_KEY: dev-only-not-a-secret
+      PAPERLESS_ADMIN_USER: admin
+      PAPERLESS_ADMIN_PASSWORD: admin
+      PAPERLESS_URL: http://localhost:8000
+      PAPERLESS_TIME_ZONE: Africa/Nairobi
+      PAPERLESS_ALLOWED_HOSTS: "localhost,127.0.0.1,webserver"
+      PAPERLESS_CORS_ALLOWED_HOSTS: "http://localhost:4200,http://localhost:8000"
+
+volumes:
+  data:
+  media:
