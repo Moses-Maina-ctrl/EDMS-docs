@@ -42,6 +42,7 @@ All endpoints are under `/api/nsdcc-workflow/`:
 | PATCH | `documents/{id}/delegate/` | Assignee or Registry | Delegate to another user |
 | PATCH | `documents/{id}/action/` | Assignee or Registry | Mark as actioned with comment |
 | PATCH | `documents/{id}/serialise/` | Registry | Set serial number for filing |
+| PATCH | `documents/{id}/summarise/` | Registry | Set a non-blank workflow summary |
 | PATCH | `documents/{id}/categorise/` | Registry | Toggle categorised (validates serial_number + document_type) |
 | POST | `documents/{id}/attachments/upload/` | Assignee or Registry | Upload supplementary file |
 | GET | `documents/{id}/attachments/` | Authenticated (filtered) | List attachments |
